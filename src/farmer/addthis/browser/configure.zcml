@@ -26,6 +26,6 @@
         />
 <utility
     name="farmer.addthis.vocabularies.ShowOnUrls"
-    component=".vocabularies.AddThisShowUrlsVocabularyFactory" /
+    component=".vocabularies.AddThisShowUrlsVocabularyFactory" />
 
 </configure>
