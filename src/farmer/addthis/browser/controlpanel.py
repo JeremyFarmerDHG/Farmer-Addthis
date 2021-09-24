@@ -6,7 +6,11 @@ from zope import schema
 from zope.interface import Interface
 
 class IAddThisControlPanel(Interface):
-    pass
+    show_addthis = schema.Bool(
+        title=u'First day of the conference',
+        required=False,
+        default=False,
+    )
 
     # show_on_urls = schema.Tuple(
     #     title = u'Show On Urls',
