@@ -1,0 +1,23 @@
+<h3 tal:condition="python:view.show_debug()"> this is the addthis viewlet </h3>
+
+<!-- <div class="addthis_toolbox addthis_default_style">
+  <a class="addthis_button_facebook"></a>
+  <a class="addthis_button_twitter"></a>
+  <a class="addthis_button_email"></a>
+  <a class="addthis_button_linkedin"></a>
+  <a class="addthis_button_compact"></a>
+</div> -->
+<!-- <?python locals().update(econtext); import pdb; pdb.set_trace() ?> -->
+
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style" tal:condition="python:view.should_show()">
+    <div>
+        <a tal:repeat="share_code python:view.get_share_buttons()" tal:attributes="class string:addthis_button_${share_code}"></a>
+    </div>
+  <!-- <a class="addthis_button_preferred_1"></a>:w
+
+  <a class="addthis_button_preferred_2"></a>
+  <a class="addthis_button_preferred_3"></a>
+  <a class="addthis_button_preferred_4"></a>
+  <a class="addthis_button_email"></a>
+  <a class="addthis_button_compact"></a> -->
+</div>

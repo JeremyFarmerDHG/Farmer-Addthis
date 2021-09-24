@@ -12,6 +12,12 @@ class IAddThisControlPanel(Interface):
         default=False,
     )
 
+    show_debug = schema.Bool(
+        title=u'Show Debug',
+        required=False,
+        default=False,
+    )
+
     show_on_urls = schema.Tuple(
         title = u'Show On Urls',
         default=(),
