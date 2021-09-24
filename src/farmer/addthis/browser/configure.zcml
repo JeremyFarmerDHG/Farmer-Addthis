@@ -24,5 +24,8 @@
         class=".controlpanel.AddThisControlPanelView"
         permission="cmf.ManagePortal"
         />
+<utility
+    name="farmer.addthis.vocabularies.ShowOnUrls"
+    component=".vocabularies.AddThisShowUrlsVocabularyFactory" /
 
 </configure>
