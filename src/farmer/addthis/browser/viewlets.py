@@ -8,11 +8,15 @@ class AddThisViewlet(ViewletBase):
         # abs_url = self.context.absolute_url_path()
         abs_url = self.request.PATH_INFO
         whitelist_url = api.portal.get_registry_record('addthis.show_on_urls')
+        blacklist_urls = api.portal.get_registry_record('addthis.blacklist_urls')
+        if blacklist_urls is None:
+            blacklist_urls = []
+        breakpoint()
         for url in whitelist_url:
             if re.fullmatch(url, abs_url):
-                import pdb; pdb.set_trace()
-                return True
-        # import pdb; pdb.set_trace()
+                if abs_url not in blacklist_urls:
+                    return True
+        # breakpoint()
         return False 
 
     def get_share_buttons(self):
