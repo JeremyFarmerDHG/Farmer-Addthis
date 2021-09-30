@@ -11,7 +11,7 @@ class AddThisViewlet(ViewletBase):
         blacklist_urls = api.portal.get_registry_record('addthis.blacklist_urls')
         if blacklist_urls is None:
             blacklist_urls = []
-        breakpoint()
+        # breakpoint()
         for url in whitelist_url:
             if re.fullmatch(url, abs_url):
                 if abs_url not in blacklist_urls:

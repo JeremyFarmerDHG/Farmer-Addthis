@@ -1,6 +1,6 @@
 <h3 tal:condition="python:view.show_debug()"> this is the addthis viewlet </h3>
 
-<!-- <?python locals().update(econtext); import pdb; pdb.set_trace() ?> -->
+<?python locals().update(econtext); import pdb; pdb.set_trace() ?>
 <div class="addthis_toolbox addthis_default_style addthis_32x32_style" tal:condition="python:view.should_show()">
     <div>
         <p>Share</p>
