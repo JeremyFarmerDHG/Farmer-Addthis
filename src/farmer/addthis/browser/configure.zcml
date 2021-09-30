@@ -18,6 +18,23 @@
       directory="static"
       />
 
+
+  <browser:page
+      name="addthis_view"
+      for="*"
+      class=".addthis.AddThisView"
+      layer="farmer.addthis.interfaces.IFarmerAddthisLayer"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="widget-addthis"
+      for="*"
+      layer="farmer.addthis.interfaces.IFarmerAddthisLayer"
+      template="templates/addthis.pt"
+      permission="zope2.View"
+      />
+
   <browser:page
         name="addthis-controlpanel"
         for="Products.CMFPlone.interfaces.IPloneSiteRoot"

@@ -1,0 +1,16 @@
+<!-- <?python locals().update(econtext); import pdb; pdb.set_trace() ?> -->
+<metal:main define-macro="main">
+  <tal:block define="utils context/@@addthis_view;">
+    <h3 tal:condition="python:utils.show_debug()"> this is the addthis viewlet </h3>
+    <div class="addthis_toolbox addthis_default_style addthis_32x32_style"
+         tal:condition="python:utils.should_show()">
+        <div>
+            <p class="addthis-header">Share</p>
+            <a tal:repeat="share_code python:utils.get_share_buttons()" tal:attributes="class string:at-shre-btnat-svc-${share_code} addthis_button_${share_code}" style="float: none;"></a>
+        </div>
+    </div>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-614ccf03754a695b"></script>
+  </tal:block>
+</metal:main>
