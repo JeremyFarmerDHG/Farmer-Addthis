@@ -2,7 +2,7 @@
 <metal:main define-macro="main">
   <tal:block define="utils context/@@addthis_view;">
     <h3 tal:condition="python:utils.show_debug()"> this is the addthis viewlet </h3>
-    <div class="addthis_toolbox addthis_default_style addthis_32x32_style"
+    <div class="addthis_sharing_toolbox addthis_default_style addthis_32x32_style"
          tal:condition="python:utils.should_show()">
         <div>
             <p class="addthis-header">Share</p>
