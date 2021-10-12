@@ -36,16 +36,6 @@
       post_handler=".setuphandlers.uninstall"
       />
 
-    <browser:viewlet
-      name="addthis"
-      for="*"
-      manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-      class=".browser.viewlets.AddThisViewlet"
-      layer="farmer.addthis.interfaces.IFarmerAddthisLayer"
-      template="browser/templates/addthis_viewlet.pt"
-      permission="zope2.View"
-      />
-
   <utility
       factory=".setuphandlers.HiddenProfiles"
       name="farmer.addthis-hiddenprofiles"
